@@ -2,6 +2,7 @@ export default themes = {
     COLORS: {
         STATUS_BAR_COLOR: '#ffacc8',
         BACKGROUND_COLOR: '#ffacc8',
+        HEADER_COLOR: '#ffccd7',
         TEXT_COLOR: '#FFFFFF',
         PURPLE: '#990099',
         RED: '#FF0000',
@@ -52,6 +53,7 @@ export default themes = {
         PADDING_HORIZONTAL_8PX: 8,
         PADDING_RIGHT_8PX: 8,
         BORDER_RADIUS_24PX: 24,        
-        BORDER_RADIUS_16PX: 16,        
+        BORDER_RADIUS_16PX: 16, 
+        ICON_SIZE_28PX: 28       
     }
 }
