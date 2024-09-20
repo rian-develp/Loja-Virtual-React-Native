@@ -28,13 +28,6 @@ export const Home = () => {
             <FlatListCustomized
                 data={result}
                 height={'81.65%'} />
-
-            <ButtonCustomized
-                buttonTitle="Próxima Tela"
-                position={"absolute"}
-                top={'88%'}
-                height={`${parseInt(width*0.159)}`}
-            />
         </Layout>
     );
 }
