@@ -5,7 +5,7 @@ import themes from "../../themes/themes";
 const { width } = Dimensions.get('screen');
 const { height } = Dimensions.get('screen');
 
-export const Product = ({ productName, productPrice, productImage, quantityStock }) => {
+export const Product = ({ productName, productPrice, productImage, quantityStock, onPress=()=>{}}) => {
     return (
         <TouchableOpacity
             style={{
@@ -15,7 +15,7 @@ export const Product = ({ productName, productPrice, productImage, quantityStock
                 marginHorizontal: themes.DIMENSIONS.MARGIN_HORIZONTAL_12PX,
             }}
             activeOpacity={0.9}
-            >
+            onPress={onPress}>
             <ProductContainer productContainerMarginTop={'24px'}>
                 <ImageBackground
                     style={{
