@@ -36,7 +36,7 @@ export const Product = ({ productName, productPrice, productImage, quantityStock
                         alignSelf: 'center',
                         top: "70%"
                     }}>
-                    {productName}
+                Nome: {productName}
                 </Text>
 
                 

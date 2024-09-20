@@ -11,7 +11,7 @@ export const MyStack = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                initialRouteName="Home">
+                initialRouteName="SignIn">
                 <Stack.Screen
                     name="Home"
                     component={Home}

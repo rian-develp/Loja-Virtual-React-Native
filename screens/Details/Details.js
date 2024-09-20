@@ -1,23 +1,17 @@
 import { Header, HeaderTitle, Layout, ProductContainer } from "./styled"
 import { Product } from "../../components/Product/Product";
-import { useRoute } from "@react-navigation/native";
-import { useEffect } from "react";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons"
 import themes from "../../themes/themes";
 
 export const Details = () => {
     const router = useRoute();
-    let productData = "";
-    useEffect(() => {
-        if (router.params) {
-            productData = {
-                launchName: router.params?.launchName,
-                launchImg: router.params?.launchImg,
-                launchPrice: router.params?.launchPrice,
-                quantityStock: router.params?.quantityStock,
-            }
-        }
-    }, [router.params]);
+    const navigation = useNavigation();
+    const launchName = router.params?.launchName;
+    const launchPrice = router.params?.launchPrice;
+    const launchImg = router.params?.launchImg;
+    const quantityStock = router.params?.quantityStock;
+
     return (
         <Layout>
             <Header
@@ -38,16 +32,19 @@ export const Details = () => {
                         paddingStart: 8,
                         paddingRight: 8,
                     }}
+                    onPress={()=> {
+                        navigation.goBack();
+                    }}
                 />
                 
                 <HeaderTitle>Detalhes</HeaderTitle>
             </Header>
             <ProductContainer>
                 <Product
-                    productImage={productData.launchImg}
-                    productName={productData.launchName}
-                    productPrice={productData.launchPrice}
-                    quantityStock={productData.quantityStock}
+                    productName={launchName}
+                    productImage={launchImg}
+                    productPrice={launchPrice}
+                    quantityStock={quantityStock}
                 />
             </ProductContainer>
         </Layout>
